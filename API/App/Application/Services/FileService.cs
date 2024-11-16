@@ -40,7 +40,7 @@ public class FileService : IFileService
         try
         {
             var sb = new StringBuilder();
-            foreach (var content in contentList) sb.Append(content + "\n");
+            foreach (var content in contentList) sb.AppendLine(content);
             
             await File.AppendAllTextAsync(_filePath, sb.ToString());
             
