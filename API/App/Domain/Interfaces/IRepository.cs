@@ -2,5 +2,6 @@
 
 public interface IRepository
 {
-    
+    Task<CatFact> GetRandomCatFactAsync();
+    Task<CatFactList> GetCatFactListAsync(int page);
 }
